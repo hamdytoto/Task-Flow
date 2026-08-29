@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="output.css" />
+	</head>
+	<body>
+		<div class="flex min-h-screen items-center justify-center px-9">
+			<div
+				id="task-modal"
+				class=" w-full flex inset-0 z-50 items-center justify-center backdrop-blur-md"
+				aria-hidden="true"
+			>
+				<div
+					class="w-full max-w-lg rounded-2xl bg-white p-6 shadow-2xl sm:p-8"
+					role="dialog"
+					aria-modal="true"
+					aria-labelledby="modal-title"
+				>
+					<div class="mb-6 flex items-start justify-between">
+						<div>
+							<p
+								class="text-xs font-bold uppercase tracking-[0.15em] text-[#2b9c7c]"
+							>
+								New task
+							</p>
+							<h2
+								id="modal-title"
+								class="display-font mt-1 text-2xl font-bold text-slate-900"
+							>
+								Create New Task
+							</h2>
+						</div>
+						<button
+							class="flex h-9 w-9 items-center justify-center rounded-lg text-slate-400 hover:bg-slate-100"
+							aria-label="Close dialog"
+						>
+							<i data-lucide="x" class="h-5 w-5"></i>
+						</button>
+					</div>
+					<form class="space-y-4">
+						<div>
+							<label
+								for="task-title"
+								class="mb-1.5 block text-sm font-semibold text-slate-700"
+								>Task Title</label
+							><input
+								id="task-title"
+								type="text"
+								value="Learn JavaScript"
+								class="h-11 w-full rounded-xl border border-slate-200 px-3 text-sm text-slate-700 outline-none focus:border-[#62b79f] focus:ring-2 focus:ring-[#d9efe8]"
+							/>
+						</div>
+						<div>
+							<label
+								for="task-description"
+								class="mb-1.5 block text-sm font-semibold text-slate-700"
+								>Description</label
+							><textarea
+								id="task-description"
+								rows="3"
+								class="w-full resize-none rounded-xl border border-slate-200 px-3 py-2.5 text-sm text-slate-700 outline-none focus:border-[#62b79f] focus:ring-2 focus:ring-[#d9efe8]"
+							>
+Practice DOM manipulation and events.</textarea
+							>
+						</div>
+						<div class="grid gap-4 sm:grid-cols-2">
+							<div>
+								<label
+									for="task-priority"
+									class="mb-1.5 block text-sm font-semibold text-slate-700"
+									>Priority</label
+								><select
+									id="task-priority"
+									class="h-11 w-full rounded-xl border border-slate-200 bg-white px-3 text-sm text-slate-700 outline-none"
+								>
+									<option>Medium</option>
+									<option>High</option>
+									<option>Low</option>
+								</select>
+							</div>
+							<div>
+								<label
+									for="task-date"
+									class="mb-1.5 block text-sm font-semibold text-slate-700"
+									>Due Date</label
+								><input
+									id="task-date"
+									type="date"
+									value="2026-08-25"
+									class="h-11 w-full rounded-xl border border-slate-200 px-3 text-sm text-slate-700 outline-none"
+								/>
+							</div>
+						</div>
+						<div>
+							<label
+								for="task-category"
+								class="mb-1.5 block text-sm font-semibold text-slate-700"
+								>Category</label
+							><select
+								id="task-category"
+								class="h-11 w-full rounded-xl border border-slate-200 bg-white px-3 text-sm text-slate-700 outline-none"
+							>
+								<option>Programming</option>
+								<option>Design</option>
+								<option>Study</option>
+								<option>Work</option>
+							</select>
+						</div>
+						<div class="flex justify-end gap-3 border-t border-slate-100 pt-5">
+							<button type="button" class="soft-button">Cancel</button
+							><button
+								type="submit"
+								class="inline-flex items-center gap-2 rounded-xl bg-[#173f36] px-4 py-2.5 text-sm font-bold text-white"
+							>
+								Create Task <i data-lucide="plus" class="h-4 w-4"></i>
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
